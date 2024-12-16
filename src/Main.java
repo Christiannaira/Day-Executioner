@@ -3,6 +3,12 @@ import java.util.Scanner;
 
 public class Main {
 
+    static void userHome(){
+
+        System.out.println("Welcome! ");
+
+    }
+
     static void loginUser(HashMap<String, Integer> userAccounts) {
 
         Scanner askUser = new Scanner(System.in);
@@ -47,13 +53,22 @@ public class Main {
             System.out.println("Enter your password: ");
             int userPassword = askUserPassword.nextInt();
 
+            if (userAccounts.containsValue(userPassword)) {
+
+                System.out.println("Logging in...");
+
+            } else {
+
+                System.out.println("Incorrect Password ");
+
+
+            }
+
         } else {
 
             System.out.println("no account was found");
 
         }
-
-
 
     }
 
