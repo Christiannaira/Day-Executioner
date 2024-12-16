@@ -5,12 +5,6 @@ public class Main {
 
     static void loginUser(HashMap<String, Integer> userAccounts) {
 
-        for (String userAccount : userAccounts.keySet()) {
-
-            System.out.println(userAccount);
-
-        }
-
         Scanner askUser = new Scanner(System.in);
 
         int i = 0;
@@ -21,7 +15,7 @@ public class Main {
 
             if (!userName.isEmpty()) {
 
-                checkUserAccount();
+                checkUserAccount(userAccounts, userName);
 
             } else {
 
@@ -37,24 +31,29 @@ public class Main {
 
     static void userAccounts(HashMap<String, Integer> userAccounts) {
 
-
-
         userAccounts.put("Christian", 1234);
         userAccounts.put("Vincent", 1234);
 
-//        for (String userAccount : userAccounts.keySet()) {
-//
-//            System.out.print(userAccount);
-//            System.out.print(" ");
-//            System.out.println(userAccounts.get(userAccount));
-//
-//        }
-
     }
 
-    static void checkUserAccount() {
+    static void checkUserAccount(HashMap<String, Integer> userAccounts, String userName) {
 
         System.out.println("checking");
+
+        Scanner askUserPassword = new Scanner(System.in);
+
+        if (userAccounts.get(userName) != null) {
+
+            System.out.println("Enter your password: ");
+            int userPassword = askUserPassword.nextInt();
+
+        } else {
+
+            System.out.println("no account was found");
+
+        }
+
+
 
     }
 
