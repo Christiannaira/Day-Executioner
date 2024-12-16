@@ -3,7 +3,13 @@ import java.util.Scanner;
 
 public class Main {
 
-    static void loginUser() {
+    static void loginUser(HashMap<String, Integer> userAccounts) {
+
+        for (String userAccount : userAccounts.keySet()) {
+
+            System.out.println(userAccount);
+
+        }
 
         Scanner askUser = new Scanner(System.in);
 
@@ -29,9 +35,9 @@ public class Main {
 
     }
 
-    static void userAccounts() {
+    static void userAccounts(HashMap<String, Integer> userAccounts) {
 
-        HashMap<String, Integer> userAccounts = new HashMap<String, Integer>();
+
 
         userAccounts.put("Christian", 1234);
         userAccounts.put("Vincent", 1234);
@@ -54,10 +60,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("hello world");
+        HashMap<String, Integer> userAccounts = new HashMap<String, Integer>();
 
-        userAccounts();
-        loginUser();
+        System.out.println("hello world");
+        userAccounts(userAccounts);
+        loginUser(userAccounts);
 
     }
 }
