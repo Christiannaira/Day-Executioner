@@ -7,8 +7,22 @@ public class Main {
         HashMap<String, Integer> userAccounts = new HashMap<String, Integer>();
 
         userAccounts.put("Christian", 1234);
+        userAccounts.put("Vincent", 1234);
 
-        System.out.println(userAccounts);
+        for (String userAccount : userAccounts.keySet()) {
+
+            System.out.print(userAccount);
+            System.out.print(" ");
+            System.out.println(userAccounts.get(userAccount));
+
+        }
+
+
+    }
+
+    static void checkUserAccount() {
+
+
 
     }
 
