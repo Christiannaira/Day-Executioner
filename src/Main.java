@@ -22,7 +22,40 @@ public class Main {
 
     static void userYear(){
 
-        System.out.println("year");
+        Scanner askUser = new Scanner(System.in);
+
+        System.out.println("\n\t\t\t\t\t==================================================\n");
+        System.out.println("\t\t\t\t\t2001\t2002\t2003\t2004\t2005\t2006\t2007\n");
+        System.out.println("\t\t\t\t\t2008\t2009\t2010\t2011\t2012\t2013\t2014\n");
+        System.out.println("\t\t\t\t\t2015\t2016\t2017\t2018\t2019\t2020\t2021\n");
+        System.out.println("\t\t\t\t\t2022\t2023\t2024\t2025\t2026\t2027\t2028\n");
+        System.out.println("\t\t\t\t\t2029\t2030\t2031\t2032\t2033\t2034\t2035\n");
+
+        System.out.print("\t\t\t\t\tSelect the Year you want to execute: ");
+        int askYear = askUser.nextInt();
+
+        userMonth(askYear);
+
+    }
+
+    static void userMonth(int year) {
+
+        Scanner askUser = new Scanner(System.in);
+
+        System.out.println("\n\t\t\t\t\t==================================================\n");
+        System.out.println("\t\t\t\t\tJanuary\tFebruary\tMarch\tApril\n");
+        System.out.println("\t\t\t\t\tMay\tJune\tJuly\tAugust\n");
+        System.out.println("\t\t\t\t\tSeptember\tOctober\tNovember\tDecember\n");
+
+
+        System.out.print("\t\t\t\t\tSelect the Month you want to execute: ");
+        String askMonth = askUser.nextLine();
+
+    }
+
+    static void askDay(String month) {
+
+
 
     }
 
