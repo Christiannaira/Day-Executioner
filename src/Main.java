@@ -3,9 +3,26 @@ import java.util.Scanner;
 
 public class Main {
 
-    static void userHome(HashMap<String, Integer> UserAccounts){
+    static void userHome(HashMap<String, Integer> userAccounts){
 
+        System.out.println("\n\t\t\t\t\t==================================================");
+        System.out.println("\t\t\t\t\tWelcome to Day Executioner\t\t\t\t\t");
+        System.out.println("\t\t\t\t\t==================================================\n");
 
+        System.out.println("\t\t\t\t\tInstructions:");
+        System.out.println("\t\t\t\t\t#1. Select your year");
+        System.out.println("\t\t\t\t\t#2. Select your month");
+        System.out.println("\t\t\t\t\t#3. Select your week");
+        System.out.println("\t\t\t\t\t#4. Select your day");
+        System.out.println("\t\t\t\t\tStart Executing Your Daily Actions!");
+
+        userYear();
+
+    }
+
+    static void userYear(){
+
+        System.out.println("year");
 
     }
 
@@ -49,7 +66,7 @@ public class Main {
 
         HashMap<String, Integer> userAccounts = new HashMap<String, Integer>();
 
-        System.out.println("hello world");
+//        System.out.println("hello world");
         userAccounts(userAccounts);
 //        loginUser(userAccounts);
         userHome(userAccounts);
