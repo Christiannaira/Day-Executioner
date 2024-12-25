@@ -43,19 +43,26 @@ public class Main {
         Scanner askUser = new Scanner(System.in);
 
         System.out.println("\n\t\t\t\t\t==================================================\n");
-        System.out.println("\t\t\t\t\tJanuary\tFebruary\tMarch\tApril\n");
-        System.out.println("\t\t\t\t\tMay\tJune\tJuly\tAugust\n");
-        System.out.println("\t\t\t\t\tSeptember\tOctober\tNovember\tDecember\n");
+        System.out.println("\t\t\t\t\t=> " + String.valueOf(year));
+        System.out.println("\n\t\t\t\t\tJanuary           February           March           April\n");
+        System.out.println("\t\t\t\t\tMay               June               July            August\n");
+        System.out.println("\t\t\t\t\tSeptember         October            November        December\n");
 
 
         System.out.print("\t\t\t\t\tSelect the Month you want to execute: ");
         String askMonth = askUser.nextLine();
 
+        askDay(askMonth);
+
     }
 
     static void askDay(String month) {
 
+        switch (month) {
 
+
+
+        }
 
     }
 
