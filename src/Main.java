@@ -35,7 +35,15 @@ public class Main {
         System.out.print("\t\t\t\t\tSelect the Year you want to execute: ");
         int askYear = askUser.nextInt();
 
-        userMonth(askYear);
+        switch (askYear) {
+
+            case 2025:
+                userMonth(askYear);
+                break;
+            default:
+                System.out.println("not available");
+
+        }
 
     }
 
@@ -63,8 +71,6 @@ public class Main {
 
             case "January":
 
-
-
                 System.out.println("\n\t\t\t\t\t==================================================\n");
                 System.out.println("\t\t\t\t\t=> " + month + "\n");
                 System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
@@ -76,7 +82,20 @@ public class Main {
 
                 break;
             case "February":
-                System.out.println("February");
+
+                System.out.println("\n\t\t\t\t\t==================================================\n");
+                System.out.println("\t\t\t\t\t=> " + month + "\n");
+                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+                System.out.println("\t\t\t\t\t      \t      \t      \t      \t      \t      \t  1   \n");
+                System.out.println("\t\t\t\t\t  2   \t  3   \t  4   \t  5   \t  6   \t  7   \t  8   \n");
+                System.out.println("\t\t\t\t\t  9   \t  10   \t  11   \t  12   \t  13   \t  14   \t  15   \n");
+                System.out.println("\t\t\t\t\t  16   \t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \n");
+                System.out.println("\t\t\t\t\t  23   \t  24   \t  25   \t  26   \t  27   \t  28   \t       \n");
+                break;
+
+            case "March":
+
+                System.out.println("helo");
                 break;
 
         }
