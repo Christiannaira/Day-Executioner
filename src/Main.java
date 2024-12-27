@@ -64,7 +64,7 @@ public class Main {
 
     }
 
-    static void sunday(int... days) {
+    static void sunday(int userDay, int... days) {
 
         ArrayList<Integer> sunday = new ArrayList<Integer>();
         for (int day : days) {
@@ -77,7 +77,7 @@ public class Main {
 
     }
 
-    static void monday(int... days) {
+    static void monday(int userDay, int... days) {
 
         ArrayList<Integer> monday = new ArrayList<Integer>();
         for (int day : days) {
@@ -90,7 +90,7 @@ public class Main {
 
     }
 
-    static void tuesday(int... days) {
+    static void tuesday(int userDay, int... days) {
 
         ArrayList<Integer> tuesday = new ArrayList<Integer>();
         for (int day : days) {
@@ -103,7 +103,7 @@ public class Main {
 
     }
 
-    static void wednesday(int... days) {
+    static void wednesday(int userDay, int... days) {
 
         ArrayList<Integer> wednesday = new ArrayList<Integer>();
         for (int day : days) {
@@ -116,7 +116,7 @@ public class Main {
 
     }
 
-    static void thursday(int... days) {
+    static void thursday(int userDay, int... days) {
 
         ArrayList<Integer> thursday = new ArrayList<Integer>();
         for (int day : days) {
@@ -129,7 +129,7 @@ public class Main {
 
     }
 
-    static void friday(int... days) {
+    static void friday(int userDay, int... days) {
 
         ArrayList<Integer> friday = new ArrayList<Integer>();
         for (int day : days) {
@@ -142,57 +142,26 @@ public class Main {
 
     }
 
+    static void saturday(int userDay, int... days) {
+
+        ArrayList<Integer> saturday = new ArrayList<Integer>();
+        for (int day : days) {
+
+            saturday.add(day);
+
+        }
+
+        System.out.println(saturday);
+
+    }
+
     static void askDay(String month) {
 
         switch (month) {
 
             case "January":
 
-                sunday(5, 12, 19, 26);
-                monday(6, 13, 20, 27);
-                tuesday(7, 14, 21, 28);
-                wednesday(1, 8, 15, 22, 29);
-                thursday(2, 9, 16, 23,30);
-                friday(3, 10, 17, 24, 31);
 
-//                ArrayList<Integer> monday = new ArrayList<Integer>();
-//                monday.add(6);
-//                monday.add(13);
-//                monday.add(20);
-//                monday.add(27);
-
-//                ArrayList<Integer> tuesday = new ArrayList<Integer>();
-//                tuesday.add(7);
-//                tuesday.add(14);
-//                tuesday.add(21);
-//                tuesday.add(28);
-
-//                ArrayList<Integer> wednesday = new ArrayList<Integer>();
-//                wednesday.add(1);
-//                wednesday.add(8);
-//                wednesday.add(15);
-//                wednesday.add(22);
-//                wednesday.add(29);
-
-//                ArrayList<Integer> thursday = new ArrayList<Integer>();
-//                thursday.add(2);
-//                thursday.add(9);
-//                thursday.add(16);
-//                thursday.add(23);
-//                thursday.add(30);
-
-//                ArrayList<Integer> friday = new ArrayList<Integer>();
-//                friday.add(3);
-//                friday.add(10);
-//                friday.add(17);
-//                friday.add(24);
-//                friday.add(31);
-
-                ArrayList<Integer> saturday = new ArrayList<Integer>();
-                saturday.add(4);
-                saturday.add(11);
-                saturday.add(18);
-                saturday.add(25);
 
                 System.out.println("\n\t\t\t\t\t==================================================\n");
                 System.out.println("\t\t\t\t\t=> " + month + "\n");
@@ -208,21 +177,14 @@ public class Main {
 
                 int askDay = askUser.nextInt();
 
-//                if (sunday.contains(askDay)) {
-//                    System.out.println("sunday");
-//                } else if (monday.contains(askDay)) {
-//                    System.out.println("monday");
-//                } else if (tuesday.contains(askDay)) {
-//                    System.out.println("tuesday");
-//                } else if (wednesday.contains(askDay)) {
-//                    System.out.println("wednesday");
-//                } else if (thursday.contains(askDay)) {
-//                    System.out.println("thursday");
-//                } else if (friday.contains(askDay)) {
-//                    System.out.println("friday");
-//                } else if (saturday.contains(askDay)) {
-//                    System.out.println("saturday");
-//                }
+                sunday(5, 12, 19, 26);
+                monday(6, 13, 20, 27);
+                tuesday(7, 14, 21, 28);
+                wednesday(1, 8, 15, 22, 29);
+                thursday(2, 9, 16, 23,30);
+                friday(3, 10, 17, 24, 31);
+                saturday(4, 11, 18, 25);
+
 
 
                 break;
