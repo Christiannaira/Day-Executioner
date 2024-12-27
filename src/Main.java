@@ -103,6 +103,19 @@ public class Main {
 
     }
 
+    static void wednesday(int... days) {
+
+        ArrayList<Integer> wednesday = new ArrayList<Integer>();
+        for (int day : days) {
+
+            wednesday.add(day);
+
+        }
+
+        System.out.println(wednesday);
+
+    }
+
     static void askDay(String month) {
 
         switch (month) {
@@ -112,6 +125,7 @@ public class Main {
                 sunday(5, 12, 19, 26);
                 monday(6, 13, 20, 27);
                 tuesday(7, 14, 21, 28);
+                wednesday(1, 8, 15, 22, 29);
 
 //                ArrayList<Integer> monday = new ArrayList<Integer>();
 //                monday.add(6);
@@ -125,12 +139,12 @@ public class Main {
 //                tuesday.add(21);
 //                tuesday.add(28);
 
-                ArrayList<Integer> wednesday = new ArrayList<Integer>();
-                wednesday.add(1);
-                wednesday.add(8);
-                wednesday.add(15);
-                wednesday.add(22);
-                wednesday.add(29);
+//                ArrayList<Integer> wednesday = new ArrayList<Integer>();
+//                wednesday.add(1);
+//                wednesday.add(8);
+//                wednesday.add(15);
+//                wednesday.add(22);
+//                wednesday.add(29);
 
                 ArrayList<Integer> thursday = new ArrayList<Integer>();
                 thursday.add(2);
