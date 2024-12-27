@@ -264,6 +264,17 @@ public class Main {
                 System.out.println("\t\t\t\t\t  20   \t  21   \t  22   \t  23   \t  24   \t  25   \t  26   \n");
                 System.out.println("\t\t\t\t\t  27   \t  28   \t  29   \t  30   \t       \t       \t       \n");
                 System.out.println("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+
+                int[] sundayListsA = {6, 13, 20, 27};
+                int[] mondayListsA = {7, 14, 21, 28};
+                int[] tuesdayListsA = {1, 8, 15, 22, 29};
+                int[] wednesdayListsA = {2, 9, 16, 23, 30};
+                int[] thursdayListsA = {3, 10, 17, 24};
+                int[] fridayListsA = {4, 11, 18, 25};
+                int[] saturdayListsA = {5, 12, 19, 26};
+
+                askDay(sundayListsA, mondayListsA, tuesdayListsA, wednesdayListsA, thursdayListsA, fridayListsA, saturdayListsA);
+
                 break;
 
             case "May":
