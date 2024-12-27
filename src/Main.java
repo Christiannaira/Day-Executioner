@@ -90,11 +90,11 @@ public class Main {
                 tuesday.add(28);
 
                 ArrayList<Integer> wednesday = new ArrayList<Integer>();
-                sunday.add(1);
-                sunday.add(8);
-                sunday.add(15);
-                sunday.add(22);
-                sunday.add(29);
+                wednesday.add(1);
+                wednesday.add(8);
+                wednesday.add(15);
+                wednesday.add(22);
+                wednesday.add(29);
 
                 ArrayList<Integer> thursday = new ArrayList<Integer>();
                 sunday.add(2);
