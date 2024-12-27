@@ -77,6 +77,14 @@ public class Main {
                 sunday.add(19);
                 sunday.add(26);
 
+                ArrayList<Integer> monday = new ArrayList<Integer>();
+                sunday.add(6);
+                sunday.add(13);
+                sunday.add(20);
+                sunday.add(27);
+
+
+
                 System.out.println("\n\t\t\t\t\t==================================================\n");
                 System.out.println("\t\t\t\t\t=> " + month + "\n");
                 System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
@@ -88,6 +96,7 @@ public class Main {
 
                 Scanner askUser = new Scanner(System.in);
                 System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
+
                 int askDay = askUser.nextInt();
 
                 if (sunday.contains(askDay)) {
@@ -95,7 +104,6 @@ public class Main {
                 } else {
                     System.out.println("not");
                 }
-
 
                 break;
             case "February":
