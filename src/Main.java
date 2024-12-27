@@ -224,6 +224,14 @@ public class Main {
 
         }
 
+        Scanner askUser = new Scanner(System.in);
+        System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
+        int askDay = askUser.nextInt();
+
+        System.out.println(askDay);
+
+
+
     }
 
     static void loginUser(HashMap<String, Integer> userAccounts) {
