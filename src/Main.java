@@ -73,11 +73,7 @@ public class Main {
 
         }
 
-        boolean contained = false;
-
-        if (sunday.contains(userDay)) {
-            contained = true;
-        }
+        boolean contained = sunday.contains(userDay);
 
         return contained;
 
