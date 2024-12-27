@@ -432,6 +432,17 @@ public class Main {
                 System.out.println("\t\t\t\t\t  16   \t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \n");
                 System.out.println("\t\t\t\t\t  23   \t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \n");
                 System.out.println("\t\t\t\t\t  30   \t       \t       \t       \t       \t       \t       \n");
+
+                int[] sundayListsNov = {2, 9, 16, 23, 30};
+                int[] mondayListsNov = {3, 10, 17, 24};
+                int[] tuesdayListsNov = {4, 11, 18, 25};
+                int[] wednesdayListsNov = {5, 12, 19, 26};
+                int[] thursdayListsNov = {6, 13, 20, 27};
+                int[] fridayListsNov = {7, 14, 21, 28};
+                int[] saturdayListsNov = {1, 8, 15, 22, 29};
+
+                askDay(sundayListsNov, mondayListsNov, tuesdayListsNov, wednesdayListsNov, thursdayListsNov, fridayListsNov, saturdayListsNov);
+
                 break;
 
             case "December":
