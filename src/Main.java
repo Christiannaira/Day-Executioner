@@ -288,6 +288,17 @@ public class Main {
                 System.out.println("\t\t\t\t\t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \t  24   \n");
                 System.out.println("\t\t\t\t\t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \t  31   \n");
                 System.out.println("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+
+                int[] sundayListsMy = {4, 11, 18, 25};
+                int[] mondayListsMy = {5, 12, 19, 26};
+                int[] tuesdayListsMy = {6, 13, 20, 27};
+                int[] wednesdayListsMy = {7, 14, 21, 28};
+                int[] thursdayListsMy = {1, 8, 15, 22, 29};
+                int[] fridayListsMy = {2, 9, 16, 23, 30};
+                int[] saturdayListsMy = {3, 10, 17, 24, 31};
+
+                askDay(sundayListsMy, mondayListsMy, tuesdayListsMy, wednesdayListsMy, thursdayListsMy, fridayListsMy, saturdayListsMy);
+
                 break;
 
             case "June":
