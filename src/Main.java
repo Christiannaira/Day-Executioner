@@ -64,18 +64,26 @@ public class Main {
 
     }
 
+    static void sunday(int... days) {
+
+        ArrayList<Integer> sunday = new ArrayList<Integer>();
+        for (int day : days) {
+
+            sunday.add(day);
+
+        }
+
+        System.out.println(sunday);
+
+    }
+
     static void askDay(String month) {
 
         switch (month) {
 
             case "January":
 
-
-                ArrayList<Integer> sunday = new ArrayList<Integer>();
-                sunday.add(5);
-                sunday.add(12);
-                sunday.add(19);
-                sunday.add(26);
+                sunday(5, 12, 19, 26);
 
                 ArrayList<Integer> monday = new ArrayList<Integer>();
                 monday.add(6);
@@ -130,7 +138,21 @@ public class Main {
 
                 int askDay = askUser.nextInt();
 
-                System.out.println(sunday);
+//                if (sunday.contains(askDay)) {
+//                    System.out.println("sunday");
+//                } else if (monday.contains(askDay)) {
+//                    System.out.println("monday");
+//                } else if (tuesday.contains(askDay)) {
+//                    System.out.println("tuesday");
+//                } else if (wednesday.contains(askDay)) {
+//                    System.out.println("wednesday");
+//                } else if (thursday.contains(askDay)) {
+//                    System.out.println("thursday");
+//                } else if (friday.contains(askDay)) {
+//                    System.out.println("friday");
+//                } else if (saturday.contains(askDay)) {
+//                    System.out.println("saturday");
+//                }
 
 
                 break;
