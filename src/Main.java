@@ -360,6 +360,17 @@ public class Main {
                 System.out.println("\t\t\t\t\t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \n");
                 System.out.println("\t\t\t\t\t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \n");
                 System.out.println("\t\t\t\t\t  31   \t       \t       \t       \t       \t       \t       \n");
+
+                int[] sundayListsAug = {3, 10, 17, 24, 31};
+                int[] mondayListsAug = {4, 11, 18, 25};
+                int[] tuesdayListsAug = {5, 12, 19, 26};
+                int[] wednesdayListsAug = {6, 13, 20, 27};
+                int[] thursdayListsAug = {7, 14, 21, 28};
+                int[] fridayListsAug = {1, 8, 15, 22, 29};
+                int[] saturdayListsAug = {2, 9, 16, 23, 30};
+
+                askDay(sundayListsAug, mondayListsAug, tuesdayListsAug, wednesdayListsAug, thursdayListsAug, fridayListsAug, saturdayListsAug);
+
                 break;
 
             case "September":
