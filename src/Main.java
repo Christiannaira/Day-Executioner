@@ -60,7 +60,7 @@ public class Main {
         System.out.print("\t\t\t\t\tSelect the Month you want to execute: ");
         String askMonth = askUser.nextLine();
 
-        askDay(askMonth);
+        calendar(askMonth);
 
     }
 
@@ -197,7 +197,32 @@ public class Main {
 
     }
 
-    static void askDay(String month) {
+    static void askDay(int[] sundayLists, int[] mondayLists, int[] tuesdayLists, int[] wednesdayLists, int[] thursdayLists, int[] fridayLists, int[] saturdayLists){
+
+        Scanner askUser = new Scanner(System.in);
+        System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
+
+        int askDay = askUser.nextInt();
+
+        if (sunday(askDay,sundayLists)) {
+            System.out.println("sunday");
+        } else if (monday(askDay, mondayLists)) {
+            System.out.println("monday");
+        } else if (tuesday(askDay,tuesdayLists)) {
+            System.out.println("tuesday");
+        } else if (wednesday(askDay, wednesdayLists)) {
+            System.out.println("wednesday");
+        } else if (thursday(askDay, thursdayLists)) {
+            System.out.println("thursday");
+        } else if (friday(askDay,fridayLists)) {
+            System.out.println("friday");
+        } else if (saturday(askDay,saturdayLists)) {
+            System.out.println("saturday");
+        }
+
+    }
+
+    static void calendar(String month) {
 
         switch (month) {
 
@@ -212,26 +237,15 @@ public class Main {
                 System.out.println("\t\t\t\t\t  19   \t  20   \t  21   \t  22   \t  23   \t  24   \t  25   \n");
                 System.out.println("\t\t\t\t\t  26   \t  27   \t  28   \t  29   \t  30   \t  31   \t       \n");
 
-                Scanner askUser = new Scanner(System.in);
-                System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
+                int[] sundayListsJ = {5, 12, 19, 26};
+                int[] mondayListsJ = {6, 13, 20, 27};
+                int[] tuesdayListsJ = {7, 14, 21, 28};
+                int[] wednesdayListsJ = {1, 8, 15, 22, 29};
+                int[] thursdayListsJ = {2, 9, 16, 23, 30};
+                int[] fridayListsJ = {3, 10, 17, 24, 31};
+                int[] saturdayListsJ = {4, 11, 18, 25};
 
-                int askDay = askUser.nextInt();
-
-                if (sunday(askDay,5, 12, 19, 26)) {
-                    System.out.println("sunday");
-                } else if (monday(askDay, 6, 13, 20, 27)) {
-                    System.out.println("monday");
-                } else if (tuesday(askDay,7, 14, 21, 28)) {
-                    System.out.println("tuesday");
-                } else if (wednesday(askDay, 1, 8, 15, 22, 29)) {
-                    System.out.println("wednesday");
-                } else if (thursday(askDay, 2, 9, 16, 23,30)) {
-                    System.out.println("thursday");
-                } else if (friday(askDay,3, 10, 17, 24, 31)) {
-                    System.out.println("friday");
-                } else if (saturday(askDay,4, 11, 18, 25)) {
-                    System.out.println("saturday");
-                }
+                askDay(sundayListsJ, mondayListsJ, tuesdayListsJ, wednesdayListsJ, thursdayListsJ, fridayListsJ, saturdayListsJ);
 
                 break;
             case "February":
@@ -244,6 +258,17 @@ public class Main {
                 System.out.println("\t\t\t\t\t  9   \t  10   \t  11   \t  12   \t  13   \t  14   \t  15   \n");
                 System.out.println("\t\t\t\t\t  16   \t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \n");
                 System.out.println("\t\t\t\t\t  23   \t  24   \t  25   \t  26   \t  27   \t  28   \t       \n");
+
+                int[] sundayListsF = {2, 9, 16, 23};
+                int[] mondayListsF = {3, 10, 17, 24};
+                int[] tuesdayListsF = {4, 11, 18, 25};
+                int[] wednesdayListsF = {5, 12, 19, 26};
+                int[] thursdayListsF = {6, 13, 20, 27};
+                int[] fridayListsF = {7, 14, 21, 28};
+                int[] saturdayListsF = {1, 8, 15, 22};
+
+                askDay(sundayListsF, mondayListsF, tuesdayListsF, wednesdayListsF, thursdayListsF, fridayListsF, saturdayListsF);
+
                 break;
 
             case "March":
