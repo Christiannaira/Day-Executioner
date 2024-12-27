@@ -89,6 +89,33 @@ public class Main {
                 sunday.add(21);
                 sunday.add(28);
 
+                ArrayList<Integer> wednesday = new ArrayList<Integer>();
+                sunday.add(1);
+                sunday.add(8);
+                sunday.add(15);
+                sunday.add(22);
+                sunday.add(29);
+
+                ArrayList<Integer> thursday = new ArrayList<Integer>();
+                sunday.add(7);
+                sunday.add(14);
+                sunday.add(21);
+                sunday.add(28);
+
+                ArrayList<Integer> friday = new ArrayList<Integer>();
+                sunday.add(7);
+                sunday.add(14);
+                sunday.add(21);
+                sunday.add(28);
+
+                ArrayList<Integer> saturday = new ArrayList<Integer>();
+                sunday.add(7);
+                sunday.add(14);
+                sunday.add(21);
+                sunday.add(28);
+
+
+
 
 
                 System.out.println("\n\t\t\t\t\t==================================================\n");
