@@ -111,10 +111,10 @@ public class Main {
                 sunday.add(31);
 
                 ArrayList<Integer> saturday = new ArrayList<Integer>();
-                sunday.add(7);
-                sunday.add(14);
-                sunday.add(21);
-                sunday.add(28);
+                sunday.add(4);
+                sunday.add(11);
+                sunday.add(18);
+                sunday.add(25);
 
 
 
