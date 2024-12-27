@@ -64,7 +64,7 @@ public class Main {
 
     }
 
-    static void sunday(int userDay, int... days) {
+    static boolean sunday(int userDay, int... days) {
 
         ArrayList<Integer> sunday = new ArrayList<Integer>();
         for (int day : days) {
@@ -73,11 +73,17 @@ public class Main {
 
         }
 
-        System.out.println(sunday);
+        boolean contained = false;
+
+        if (sunday.contains(userDay)) {
+            contained = true;
+        }
+
+        return contained;
 
     }
 
-    static void monday(int userDay, int... days) {
+    static boolean monday(int userDay, int... days) {
 
         ArrayList<Integer> monday = new ArrayList<Integer>();
         for (int day : days) {
@@ -86,11 +92,17 @@ public class Main {
 
         }
 
-        System.out.println(monday);
+        boolean contained = false;
+
+        if (monday.contains(userDay)) {
+            contained = true;
+        }
+
+        return contained;
 
     }
 
-    static void tuesday(int userDay, int... days) {
+    static boolean tuesday(int userDay, int... days) {
 
         ArrayList<Integer> tuesday = new ArrayList<Integer>();
         for (int day : days) {
@@ -99,11 +111,17 @@ public class Main {
 
         }
 
-        System.out.println(tuesday);
+        boolean contained = false;
+
+        if (tuesday.contains(userDay)) {
+            contained = true;
+        }
+
+        return contained;
 
     }
 
-    static void wednesday(int userDay, int... days) {
+    static boolean wednesday(int userDay, int... days) {
 
         ArrayList<Integer> wednesday = new ArrayList<Integer>();
         for (int day : days) {
@@ -112,11 +130,17 @@ public class Main {
 
         }
 
-        System.out.println(wednesday);
+        boolean contained = false;
+
+        if (wednesday.contains(userDay)) {
+            contained = true;
+        }
+
+        return contained;
 
     }
 
-    static void thursday(int userDay, int... days) {
+    static boolean thursday(int userDay, int... days) {
 
         ArrayList<Integer> thursday = new ArrayList<Integer>();
         for (int day : days) {
@@ -125,11 +149,17 @@ public class Main {
 
         }
 
-        System.out.println(thursday);
+        boolean contained = false;
+
+        if (thursday.contains(userDay)) {
+            contained = true;
+        }
+
+        return contained;
 
     }
 
-    static void friday(int userDay, int... days) {
+    static boolean friday(int userDay, int... days) {
 
         ArrayList<Integer> friday = new ArrayList<Integer>();
         for (int day : days) {
@@ -138,11 +168,17 @@ public class Main {
 
         }
 
-        System.out.println(friday);
+        boolean contained = false;
+
+        if (friday.contains(userDay)) {
+            contained = true;
+        }
+
+        return contained;
 
     }
 
-    static void saturday(int userDay, int... days) {
+    static boolean saturday(int userDay, int... days) {
 
         ArrayList<Integer> saturday = new ArrayList<Integer>();
         for (int day : days) {
@@ -151,7 +187,13 @@ public class Main {
 
         }
 
-        System.out.println(saturday);
+        boolean contained = false;
+
+        if (saturday.contains(userDay)) {
+            contained = true;
+        }
+
+        return contained;
 
     }
 
@@ -160,8 +202,6 @@ public class Main {
         switch (month) {
 
             case "January":
-
-
 
                 System.out.println("\n\t\t\t\t\t==================================================\n");
                 System.out.println("\t\t\t\t\t=> " + month + "\n");
@@ -177,15 +217,21 @@ public class Main {
 
                 int askDay = askUser.nextInt();
 
-                sunday(5, 12, 19, 26);
-                monday(6, 13, 20, 27);
-                tuesday(7, 14, 21, 28);
-                wednesday(1, 8, 15, 22, 29);
-                thursday(2, 9, 16, 23,30);
-                friday(3, 10, 17, 24, 31);
-                saturday(4, 11, 18, 25);
-
-
+                if (sunday(askDay,5, 12, 19, 26)) {
+                    System.out.println("sunday");
+                } else if (monday(askDay, 6, 13, 20, 27)) {
+                    System.out.println("monday");
+                } else if (tuesday(askDay,7, 14, 21, 28)) {
+                    System.out.println("tuesday");
+                } else if (wednesday(askDay, 1, 8, 15, 22, 29)) {
+                    System.out.println("wednesday");
+                } else if (thursday(askDay, 2, 9, 16, 23,30)) {
+                    System.out.println("thursday");
+                } else if (friday(askDay,3, 10, 17, 24, 31)) {
+                    System.out.println("friday");
+                } else if (saturday(askDay,4, 11, 18, 25)) {
+                    System.out.println("saturday");
+                }
 
                 break;
             case "February":
