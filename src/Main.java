@@ -13,7 +13,6 @@ public class Main {
         System.out.println("\t\t\t\t\tInstructions:");
         System.out.println("\t\t\t\t\t#1. Select your year");
         System.out.println("\t\t\t\t\t#2. Select your month");
-        System.out.println("\t\t\t\t\t#3. Select your week");
         System.out.println("\t\t\t\t\t#4. Select your day");
         System.out.println("\t\t\t\t\tStart Executing Your Daily Actions!");
 
