@@ -73,9 +73,7 @@ public class Main {
 
         }
 
-        boolean contained = sunday.contains(userDay);
-
-        return contained;
+        return sunday.contains(userDay);
 
     }
 
@@ -88,13 +86,7 @@ public class Main {
 
         }
 
-        boolean contained = false;
-
-        if (monday.contains(userDay)) {
-            contained = true;
-        }
-
-        return contained;
+        return monday.contains(userDay);
 
     }
 
@@ -107,13 +99,7 @@ public class Main {
 
         }
 
-        boolean contained = false;
-
-        if (tuesday.contains(userDay)) {
-            contained = true;
-        }
-
-        return contained;
+        return tuesday.contains(userDay);
 
     }
 
@@ -126,13 +112,7 @@ public class Main {
 
         }
 
-        boolean contained = false;
-
-        if (wednesday.contains(userDay)) {
-            contained = true;
-        }
-
-        return contained;
+        return wednesday.contains(userDay);
 
     }
 
@@ -145,13 +125,7 @@ public class Main {
 
         }
 
-        boolean contained = false;
-
-        if (thursday.contains(userDay)) {
-            contained = true;
-        }
-
-        return contained;
+        return thursday.contains(userDay);
 
     }
 
@@ -164,13 +138,7 @@ public class Main {
 
         }
 
-        boolean contained = false;
-
-        if (friday.contains(userDay)) {
-            contained = true;
-        }
-
-        return contained;
+        return friday.contains(userDay);
 
     }
 
@@ -183,13 +151,7 @@ public class Main {
 
         }
 
-        boolean contained = false;
-
-        if (saturday.contains(userDay)) {
-            contained = true;
-        }
-
-        return contained;
+        return saturday.contains(userDay);
 
     }
 
