@@ -83,6 +83,12 @@ public class Main {
                 sunday.add(20);
                 sunday.add(27);
 
+                ArrayList<Integer> tuesday = new ArrayList<Integer>();
+                sunday.add(7);
+                sunday.add(14);
+                sunday.add(21);
+                sunday.add(28);
+
 
 
                 System.out.println("\n\t\t\t\t\t==================================================\n");
