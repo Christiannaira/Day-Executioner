@@ -78,10 +78,10 @@ public class Main {
                 sunday.add(26);
 
                 ArrayList<Integer> monday = new ArrayList<Integer>();
-                sunday.add(6);
-                sunday.add(13);
-                sunday.add(20);
-                sunday.add(27);
+                monday.add(6);
+                monday.add(13);
+                monday.add(20);
+                monday.add(27);
 
                 ArrayList<Integer> tuesday = new ArrayList<Integer>();
                 sunday.add(7);
@@ -116,10 +116,6 @@ public class Main {
                 sunday.add(18);
                 sunday.add(25);
 
-
-
-
-
                 System.out.println("\n\t\t\t\t\t==================================================\n");
                 System.out.println("\t\t\t\t\t=> " + month + "\n");
                 System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
@@ -134,11 +130,8 @@ public class Main {
 
                 int askDay = askUser.nextInt();
 
-                if (sunday.contains(askDay)) {
-                    System.out.println(askDay);
-                } else {
-                    System.out.println("not");
-                }
+                System.out.println(sunday);
+
 
                 break;
             case "February":
