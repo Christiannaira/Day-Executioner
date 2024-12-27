@@ -70,6 +70,8 @@ public class Main {
 
             case "January":
 
+                int[] sunday = {5, 12, 19, 26};
+
                 System.out.println("\n\t\t\t\t\t==================================================\n");
                 System.out.println("\t\t\t\t\t=> " + month + "\n");
                 System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
@@ -78,6 +80,25 @@ public class Main {
                 System.out.println("\t\t\t\t\t  12   \t  13   \t  14   \t  15   \t  16   \t  17   \t  18   \n");
                 System.out.println("\t\t\t\t\t  19   \t  20   \t  21   \t  22   \t  23   \t  24   \t  25   \n");
                 System.out.println("\t\t\t\t\t  26   \t  27   \t  28   \t  29   \t  30   \t  31   \t       \n");
+
+                Scanner askUser = new Scanner(System.in);
+                System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
+                int askDay = askUser.nextInt();
+
+                for (int day : sunday) {
+
+                    if (day == askDay) {
+
+                        System.out.println(askDay);
+
+                    } else {
+
+                        System.out.println("not equal");
+
+                    }
+
+                }
+
 
                 break;
             case "February":
@@ -224,11 +245,11 @@ public class Main {
 
         }
 
-        Scanner askUser = new Scanner(System.in);
-        System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
-        int askDay = askUser.nextInt();
-
-        System.out.println(askDay);
+//        Scanner askUser = new Scanner(System.in);
+//        System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
+//        int askDay = askUser.nextInt();
+//
+//        System.out.println(askDay);
 
 
 
