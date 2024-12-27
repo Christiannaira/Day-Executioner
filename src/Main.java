@@ -70,7 +70,12 @@ public class Main {
 
             case "January":
 
-                int[] sunday = {5, 12, 19, 26};
+
+                ArrayList<Integer> sunday = new ArrayList<Integer>();
+                sunday.add(5);
+                sunday.add(12);
+                sunday.add(19);
+                sunday.add(26);
 
                 System.out.println("\n\t\t\t\t\t==================================================\n");
                 System.out.println("\t\t\t\t\t=> " + month + "\n");
@@ -85,18 +90,10 @@ public class Main {
                 System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
                 int askDay = askUser.nextInt();
 
-                for (int day : sunday) {
-
-                    if (day == askDay) {
-
-                        System.out.println(askDay);
-
-                    } else {
-
-                        System.out.println("not equal");
-
-                    }
-
+                if (sunday.contains(askDay)) {
+                    System.out.println(askDay);
+                } else {
+                    System.out.println("not");
                 }
 
 
