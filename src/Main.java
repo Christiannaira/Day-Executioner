@@ -111,10 +111,10 @@ public class Main {
                 friday.add(31);
 
                 ArrayList<Integer> saturday = new ArrayList<Integer>();
-                sunday.add(4);
-                sunday.add(11);
-                sunday.add(18);
-                sunday.add(25);
+                saturday.add(4);
+                saturday.add(11);
+                saturday.add(18);
+                saturday.add(25);
 
                 System.out.println("\n\t\t\t\t\t==================================================\n");
                 System.out.println("\t\t\t\t\t=> " + month + "\n");
