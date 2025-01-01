@@ -39,8 +39,38 @@ public class Main {
             case 2025:
                 userMonth(askYear);
                 break;
+            case 2026:
+                userMonth(askYear);
+                break;
+            case 2027:
+                System.out.println("2027");
+                break;
+            case 2028:
+                System.out.println("2028");
+                break;
+            case 2029:
+                System.out.println("2029");
+                break;
+            case 2030:
+                System.out.println("2030");
+                break;
+            case 2031:
+                System.out.println("2031");
+                break;
+            case 2032:
+                System.out.println("2032");
+                break;
+            case 2033:
+                System.out.println("2033");
+                break;
+            case 2034:
+                System.out.println("2034");
+                break;
+            case 2035:
+                System.out.println("2035");
+                break;
             default:
-                System.out.println("not available");
+                System.out.println(String.valueOf(askYear) + " is not available");
 
         }
 
@@ -60,7 +90,7 @@ public class Main {
         System.out.print("\t\t\t\t\tSelect the Month you want to execute: ");
         String askMonth = askUser.nextLine();
 
-        calendar(askMonth);
+        calendarTweFive(askMonth);
 
     }
 
@@ -180,7 +210,7 @@ public class Main {
 
     }
 
-    static void calendar(String month) {
+    static void calendarTweFive(String month) {
 
         switch (month) {
 
