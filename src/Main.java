@@ -670,20 +670,20 @@ public class Main {
                 System.out.println("\n\t\t\t\t\t==================================================\n");
                 System.out.println("\t\t\t\t\t=> " + month + "\n");
                 System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
-                System.out.println("\t\t\t\t\t      \t      \t  1   \t  2   \t  3   \t  4   \t  5   \n");
-                System.out.println("\t\t\t\t\t  6   \t  7   \t  8   \t  9   \t  10   \t  11   \t  12   \n");
-                System.out.println("\t\t\t\t\t  13   \t  14   \t  15   \t  16   \t  17   \t  18   \t  19   \n");
-                System.out.println("\t\t\t\t\t  20   \t  21   \t  22   \t  23   \t  24   \t  25   \t  26   \n");
-                System.out.println("\t\t\t\t\t  27   \t  28   \t  29   \t  30   \t  31   \t       \t       \n");
+                System.out.println("\t\t\t\t\t      \t      \t      \t  1   \t  2   \t  3   \t  4   \n");
+                System.out.println("\t\t\t\t\t  5   \t  6   \t  7   \t  8   \t  9   \t  10   \t  11   \n");
+                System.out.println("\t\t\t\t\t  12   \t  13   \t  14   \t  15   \t  16   \t  17   \t  18   \n");
+                System.out.println("\t\t\t\t\t  19   \t  20   \t  21   \t  22  \t  23   \t  24   \t  25   \n");
+                System.out.println("\t\t\t\t\t  26   \t  27   \t  28   \t  29   \t  30   \t  31   \t       \n");
                 System.out.println("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
 
-                int[] sundayListsJy = {6, 13, 20, 27};
-                int[] mondayListsJy = {7, 14, 21, 28};
-                int[] tuesdayListsJy = {1, 8, 15, 22, 29};
-                int[] wednesdayListsJy = {2, 9, 16, 23, 30};
-                int[] thursdayListsJy = {3, 10, 17, 24, 31};
-                int[] fridayListsJy = {4, 11, 18, 25};
-                int[] saturdayListsJy = {5, 12, 19, 26};
+                int[] sundayListsJy = {5, 12, 19, 26};
+                int[] mondayListsJy = {6, 13, 20, 27};
+                int[] tuesdayListsJy = {7, 14, 21, 28};
+                int[] wednesdayListsJy = {1, 8, 15, 22, 29};
+                int[] thursdayListsJy = {2, 9, 16, 23, 30};
+                int[] fridayListsJy = {3, 10, 17, 24, 31};
+                int[] saturdayListsJy = {4, 11, 18, 25};
 
                 askDay(sundayListsJy, mondayListsJy, tuesdayListsJy, wednesdayListsJy, thursdayListsJy, fridayListsJy, saturdayListsJy);
 
