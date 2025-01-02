@@ -701,13 +701,13 @@ public class Main {
                 System.out.println("\t\t\t\t\t  23   \t  24   \t  25   \t  26   \t  27   \t  28   \t  29  \n");
                 System.out.println("\t\t\t\t\t  30   \t  31   \t       \t       \t       \t       \t       \n");
 
-                int[] sundayListsAug = {3, 10, 17, 24, 31};
-                int[] mondayListsAug = {4, 11, 18, 25};
-                int[] tuesdayListsAug = {5, 12, 19, 26};
-                int[] wednesdayListsAug = {6, 13, 20, 27};
-                int[] thursdayListsAug = {7, 14, 21, 28};
-                int[] fridayListsAug = {1, 8, 15, 22, 29};
-                int[] saturdayListsAug = {2, 9, 16, 23, 30};
+                int[] sundayListsAug = {2, 9, 16, 23, 30};
+                int[] mondayListsAug = {3, 10, 17, 24, 31};
+                int[] tuesdayListsAug = {4, 11, 18, 25};
+                int[] wednesdayListsAug = {5, 12, 19, 26};
+                int[] thursdayListsAug = {6, 13, 20, 27};
+                int[] fridayListsAug = {7, 14, 21, 28};
+                int[] saturdayListsAug = {1, 8, 15, 22, 29};
 
                 askDay(sundayListsAug, mondayListsAug, tuesdayListsAug, wednesdayListsAug, thursdayListsAug, fridayListsAug, saturdayListsAug);
 
