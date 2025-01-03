@@ -101,7 +101,7 @@ public class CalendarData {
 
     }
 
-    static void askDay(int[] sundayLists, int[] mondayLists, int[] tuesdayLists, int[] wednesdayLists, int[] thursdayLists, int[] fridayLists, int[] saturdayLists){
+    void askDay(int[] sundayLists, int[] mondayLists, int[] tuesdayLists, int[] wednesdayLists, int[] thursdayLists, int[] fridayLists, int[] saturdayLists){
 
         Scanner askUser = new Scanner(System.in);
         System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
@@ -122,6 +122,36 @@ public class CalendarData {
             System.out.println("friday");
         } else if (saturday(askDay,saturdayLists)) {
             System.out.println("saturday");
+        }
+
+        String[] strings = {"\n\t\t\t\t\t==================================================\n",
+                "\t\t\t\t\t=> " + theMonth + "\n",
+                "\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n",
+                "\t\t\t\t\t      \t      \t      \t      \t      \t  1   \t  2   \n",
+                "\t\t\t\t\t  3   \t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \n",
+                "\t\t\t\t\t  10   \t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \n",
+                "\t\t\t\t\t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \n",
+                "\t\t\t\t\t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \n",
+                "\t\t\t\t\t  31   \t       \t       \t       \t       \t       \t       \n"
+        };
+
+        for (int i = 0; i < strings.length; i++) {
+
+            int theIndex = strings[i].indexOf(String.valueOf(askDay));
+
+//            System.out.println(String.valueOf(theIndex) + " : ");
+
+            if (strings[i].indexOf(String.valueOf(askDay)) > 0) {
+
+                System.out.println(strings[i].replace(strings[i].substring(theIndex, theIndex + 2), "X"));
+
+            } else {
+
+                System.out.println(strings[i]);
+
+            }
+
+
         }
 
     }
