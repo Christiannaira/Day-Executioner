@@ -43,7 +43,7 @@ public class Main {
                 userMonth(askYear);
                 break;
             case 2027:
-                System.out.println("2027");
+                userMonth(askYear);
                 break;
             case 2028:
                 System.out.println("2028");
@@ -101,6 +101,8 @@ public class Main {
             case 2026:
                 calendarYear.calendarTweSix();
 //                calendarTweSix(askMonth);
+            case 2027:
+                calendarYear.calendarTweSeven();
                 break;
 
         }
