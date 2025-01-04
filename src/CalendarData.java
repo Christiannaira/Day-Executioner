@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class CalendarData {
 
@@ -135,22 +136,38 @@ public class CalendarData {
                 "\t\t\t\t\t  31   \t       \t       \t       \t       \t       \t       \n"
         };
 
+        boolean singleValue = true;
+
         for (int i = 0; i < strings.length; i++) {
 
             int theIndex = strings[i].indexOf(String.valueOf(askDay));
 
-//            System.out.println(String.valueOf(theIndex) + " : ");
+            if (theIndex == -1) {
 
-            if (strings[i].indexOf(String.valueOf(askDay)) > 0) {
+                System.out.println(strings[i]);
 
-                System.out.println(strings[i].replace(strings[i].substring(theIndex, theIndex + 2), "X"));
+            } else if (String.valueOf(askDay).length() == 1) {
+
+                if (strings[i].substring(theIndex, theIndex+1).trim().equals(String.valueOf(askDay)) && singleValue) {
+
+                    System.out.println(strings[i].replace(strings[i].substring(theIndex, theIndex + 1), "X"));
+                    singleValue = false;
+
+                } else {
+
+                    System.out.println(strings[i]);
+
+                }
+
+            } else if (String.valueOf(askDay).length() == 2) {
+
+                System.out.println(strings[i].replace(strings[i].substring(theIndex, theIndex + 2), "XX"));
 
             } else {
 
                 System.out.println(strings[i]);
 
             }
-
 
         }
 
