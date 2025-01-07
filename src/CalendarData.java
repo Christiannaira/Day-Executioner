@@ -140,6 +140,8 @@ public class CalendarData {
 
         boolean singleValue = true;
 
+        String replacement;
+
         for (int i = 0; i < calendarMonth.size(); i++) {
 
             int theIndex = calendarMonth.get(i).indexOf(String.valueOf(askDay));
@@ -151,34 +153,46 @@ public class CalendarData {
 
             } else if (String.valueOf(askDay).length() == 1) {
 
+
+
                 if (calendarMonth.get(i).substring(theIndex, theIndex+1).trim().equals(String.valueOf(askDay)) && singleValue) {
 
                     System.out.println(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X"));
-                    newStrings.add(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X"));
+//                    newStrings.add(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X"));
+                    replacement = calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X");
+                    calendarMonth.set(i, replacement);
                     singleValue = false;
 
                 } else {
 
                     System.out.println(calendarMonth.get(i));
-                    newStrings.add(calendarMonth.get(i));
+//                    newStrings.add(calendarMonth.get(i));
                 }
 
             } else if (String.valueOf(askDay).length() == 2) {
 
                 System.out.println(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX"));
-                newStrings.add(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX"));
+//                newStrings.add(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX"));
+                replacement  = calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX");
+                calendarMonth.set(i, replacement);
 
             } else {
 
                 System.out.println(calendarMonth.get(i));
-                newStrings.add(calendarMonth.get(i));
+//                newStrings.add(calendarMonth.get(i));
 
             }
 
         }
 
-        for (String newString: newStrings) {
-            System.out.println(newString);
+//        for (String newString: newStrings) {
+//            System.out.println(newString);
+//        }
+
+        for (String calendar: calendarMonth) {
+
+            System.out.println(calendar);
+
         }
 
     }
