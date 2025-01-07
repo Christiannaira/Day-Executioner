@@ -102,7 +102,7 @@ public class CalendarData {
 
     }
 
-    void askDay(int[] sundayLists, int[] mondayLists, int[] tuesdayLists, int[] wednesdayLists, int[] thursdayLists, int[] fridayLists, int[] saturdayLists, ArrayList<String> calendarMonth){
+    void askDay(int[] sundayLists, int[] mondayLists, int[] tuesdayLists, int[] wednesdayLists, int[] thursdayLists, int[] fridayLists, int[] saturdayLists, ArrayList<String> calendarMonth, boolean singleValue){
 
         Scanner askUser = new Scanner(System.in);
         System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
@@ -138,7 +138,6 @@ public class CalendarData {
 
         ArrayList<String> newStrings = new ArrayList<String>();
 
-        boolean singleValue = true;
 
         String replacement;
 
@@ -148,8 +147,8 @@ public class CalendarData {
 
             if (theIndex == -1) {
 
-                System.out.println(calendarMonth.get(i));
-                newStrings.add(calendarMonth.get(i));
+//                System.out.println(calendarMonth.get(i));
+//                newStrings.add(calendarMonth.get(i));
 
             } else if (String.valueOf(askDay).length() == 1) {
 
@@ -157,7 +156,7 @@ public class CalendarData {
 
                 if (calendarMonth.get(i).substring(theIndex, theIndex+1).trim().equals(String.valueOf(askDay)) && singleValue) {
 
-                    System.out.println(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X"));
+//                    System.out.println(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X"));
 //                    newStrings.add(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X"));
                     replacement = calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X");
                     calendarMonth.set(i, replacement);
@@ -165,20 +164,20 @@ public class CalendarData {
 
                 } else {
 
-                    System.out.println(calendarMonth.get(i));
+//                    System.out.println(calendarMonth.get(i));
 //                    newStrings.add(calendarMonth.get(i));
                 }
 
             } else if (String.valueOf(askDay).length() == 2) {
 
-                System.out.println(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX"));
+//                System.out.println(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX"));
 //                newStrings.add(calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX"));
                 replacement  = calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX");
                 calendarMonth.set(i, replacement);
 
             } else {
 
-                System.out.println(calendarMonth.get(i));
+//                System.out.println(calendarMonth.get(i));
 //                newStrings.add(calendarMonth.get(i));
 
             }
@@ -829,9 +828,14 @@ public class CalendarData {
                 int[] fridayListsJ = {1, 8, 15, 22, 29};
                 int[] saturdayListsJ = {2, 9, 16, 23, 30};
 
-                askDay(sundayListsJ, mondayListsJ, tuesdayListsJ, wednesdayListsJ, thursdayListsJ, fridayListsJ, saturdayListsJ, calendarJan);
+                while(true) {
+                    boolean singleValue = true;
 
-                break;
+                    askDay(sundayListsJ, mondayListsJ, tuesdayListsJ, wednesdayListsJ, thursdayListsJ, fridayListsJ, saturdayListsJ, calendarJan, singleValue);
+                    continue;
+                }
+
+
             case "February":
 
                 System.out.println("\n\t\t\t\t\t==================================================\n");
