@@ -136,6 +136,8 @@ public class CalendarData {
                 "\t\t\t\t\t  31   \t       \t       \t       \t       \t       \t       \n"
         };
 
+        ArrayList<String> newStrings = new ArrayList<String>();
+
         boolean singleValue = true;
 
         for (int i = 0; i < strings.length; i++) {
@@ -145,30 +147,38 @@ public class CalendarData {
             if (theIndex == -1) {
 
                 System.out.println(strings[i]);
+                newStrings.add(strings[i]);
 
             } else if (String.valueOf(askDay).length() == 1) {
 
                 if (strings[i].substring(theIndex, theIndex+1).trim().equals(String.valueOf(askDay)) && singleValue) {
 
                     System.out.println(strings[i].replace(strings[i].substring(theIndex, theIndex + 1), "X"));
+                    newStrings.add(strings[i].replace(strings[i].substring(theIndex, theIndex + 1), "X"));
                     singleValue = false;
 
                 } else {
 
                     System.out.println(strings[i]);
-
+                    newStrings.add(strings[i]);
                 }
 
             } else if (String.valueOf(askDay).length() == 2) {
 
                 System.out.println(strings[i].replace(strings[i].substring(theIndex, theIndex + 2), "XX"));
+                newStrings.add(strings[i].replace(strings[i].substring(theIndex, theIndex + 2), "XX"));
 
             } else {
 
                 System.out.println(strings[i]);
+                newStrings.add(strings[i]);
 
             }
 
+        }
+
+        for (String newString: newStrings) {
+            System.out.println(newString);
         }
 
     }
@@ -772,15 +782,30 @@ public class CalendarData {
 
             case "January":
 
-                System.out.println("\n\t\t\t\t\t==================================================\n");
-                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
-                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
-                System.out.println("\t\t\t\t\t      \t      \t      \t      \t      \t  1   \t  2   \n");
-                System.out.println("\t\t\t\t\t  3   \t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \n");
-                System.out.println("\t\t\t\t\t  10   \t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \n");
-                System.out.println("\t\t\t\t\t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \n");
-                System.out.println("\t\t\t\t\t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \n");
-                System.out.println("\t\t\t\t\t  31   \t       \t       \t       \t       \t       \t       \n");
+                ArrayList<String> stringsJan = new ArrayList<String>();
+                stringsJan.add("\n\t\t\t\t\t==================================================\n");
+                stringsJan.add("\t\t\t\t\t=> " + theMonth + "\n");
+                stringsJan.add("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+                stringsJan.add("\t\t\t\t\t      \t      \t      \t      \t      \t  1   \t  2   \n");
+                stringsJan.add("\t\t\t\t\t  3   \t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \n");
+                stringsJan.add("\t\t\t\t\t  10   \t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \n");
+                stringsJan.add("\t\t\t\t\t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \n");
+                stringsJan.add("\t\t\t\t\t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \n");
+                stringsJan.add("\t\t\t\t\t  31   \t       \t       \t       \t       \t       \t       \n");
+
+                for (String jan : stringsJan) {
+                    System.out.println(jan);
+                }
+
+//                System.out.println("\n\t\t\t\t\t==================================================\n");
+//                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
+//                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+//                System.out.println("\t\t\t\t\t      \t      \t      \t      \t      \t  1   \t  2   \n");
+//                System.out.println("\t\t\t\t\t  3   \t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \n");
+//                System.out.println("\t\t\t\t\t  10   \t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \n");
+//                System.out.println("\t\t\t\t\t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \n");
+//                System.out.println("\t\t\t\t\t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \n");
+//                System.out.println("\t\t\t\t\t  31   \t       \t       \t       \t       \t       \t       \n");
 
                 int[] sundayListsJ = {3, 10, 17, 24, 31};
                 int[] mondayListsJ = {4, 11, 18, 25};
