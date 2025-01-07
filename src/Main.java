@@ -95,11 +95,11 @@ public class Main {
         switch (year) {
 
             case 2025:
-                calendarYear.calendarTweFive();
+//                calendarYear.calendarTweFive();
 //                calendarTweFive(askMonth);
                 break;
             case 2026:
-                calendarYear.calendarTweSix();
+//                calendarYear.calendarTweSix();
 //                calendarTweSix(askMonth);
             case 2027:
                 calendarYear.calendarTweSeven();
