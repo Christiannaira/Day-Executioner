@@ -793,20 +793,33 @@ public class CalendarData {
                     boolean singleValue = true;
 
                     askDay(sundayListsJ, mondayListsJ, tuesdayListsJ, wednesdayListsJ, thursdayListsJ, fridayListsJ, saturdayListsJ, calendarJan, singleValue);
-                    continue;
                 }
 
 
             case "February":
 
-                System.out.println("\n\t\t\t\t\t==================================================\n");
-                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
-                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
-                System.out.println("\t\t\t\t\t      \t  1   \t  2   \t  3   \t  4   \t  5   \t  6   \n");
-                System.out.println("\t\t\t\t\t  7   \t  8   \t  9   \t  10   \t  11   \t  12   \t  13   \n");
-                System.out.println("\t\t\t\t\t  14   \t  15   \t  16   \t  17   \t  18   \t  19   \t  20   \n");
-                System.out.println("\t\t\t\t\t  21   \t  22   \t  23   \t  24   \t  25   \t  26   \t  27   \n");
-                System.out.println("\t\t\t\t\t  28   \t       \t       \t       \t       \t       \t       \n");
+                ArrayList<String> calendarFeb = new ArrayList<>();
+                calendarFeb.add("\n\t\t\t\t\t==================================================\n");
+                calendarFeb.add("\t\t\t\t\t=> " + theMonth + "\n");
+                calendarFeb.add("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+                calendarFeb.add("\t\t\t\t\t      \t  1   \t  2   \t  3   \t  4   \t  5   \t  6   \n");
+                calendarFeb.add("\t\t\t\t\t  7   \t  8   \t  9   \t  10   \t  11   \t  12   \t  13   \n");
+                calendarFeb.add("\t\t\t\t\t  14   \t  15   \t  16   \t  17   \t  18   \t  19   \t  20   \n");
+                calendarFeb.add("\t\t\t\t\t  21   \t  22   \t  23   \t  24   \t  25   \t  26   \t  27   \n");
+                calendarFeb.add("\t\t\t\t\t  28   \t       \t       \t       \t       \t       \t       \n");
+
+//                System.out.println("\n\t\t\t\t\t==================================================\n");
+//                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
+//                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+//                System.out.println("\t\t\t\t\t      \t  1   \t  2   \t  3   \t  4   \t  5   \t  6   \n");
+//                System.out.println("\t\t\t\t\t  7   \t  8   \t  9   \t  10   \t  11   \t  12   \t  13   \n");
+//                System.out.println("\t\t\t\t\t  14   \t  15   \t  16   \t  17   \t  18   \t  19   \t  20   \n");
+//                System.out.println("\t\t\t\t\t  21   \t  22   \t  23   \t  24   \t  25   \t  26   \t  27   \n");
+//                System.out.println("\t\t\t\t\t  28   \t       \t       \t       \t       \t       \t       \n");
+
+                for (String feb : calendarFeb) {
+                    System.out.println(feb);
+                }
 
                 int[] sundayListsF = {7, 14, 21, 28};
                 int[] mondayListsF = {1, 8, 15, 22};
@@ -816,9 +829,12 @@ public class CalendarData {
                 int[] fridayListsF = {5, 12, 19, 26};
                 int[] saturdayListsF = {6, 13, 20, 27};
 
-//                askDay(sundayListsF, mondayListsF, tuesdayListsF, wednesdayListsF, thursdayListsF, fridayListsF, saturdayListsF);
+                while (true) {
 
-                break;
+                    boolean singleValue = true;
+
+                    askDay(sundayListsF, mondayListsF, tuesdayListsF, wednesdayListsF, thursdayListsF, fridayListsF, saturdayListsF, calendarFeb, singleValue);
+                }
 
             case "March":
 
