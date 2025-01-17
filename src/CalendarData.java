@@ -102,7 +102,7 @@ public class CalendarData {
 
     }
 
-    void askDay(int[] sundayLists, int[] mondayLists, int[] tuesdayLists, int[] wednesdayLists, int[] thursdayLists, int[] fridayLists, int[] saturdayLists, ArrayList<String> calendarMonth, boolean singleValue){
+    void askDay(int[] sundayLists, int[] mondayLists, int[] tuesdayLists, int[] wednesdayLists, int[] thursdayLists, int[] fridayLists, int[] saturdayLists, ArrayList<String> calendarMonth, boolean singleValue, ArrayList<String> dateExecuted){
 
         Scanner askUser = new Scanner(System.in);
         System.out.print("\t\t\t\t\tSelect the Day you want to execute: ");
@@ -134,22 +134,32 @@ public class CalendarData {
 
             if (theIndex == -1) {
 
+                //nothing will happen
 
             } else if (String.valueOf(askDay).length() == 1) {
 
+                if (!dateExecuted.contains(String.valueOf(askDay))) {
 
-                if (calendarMonth.get(i).substring(theIndex, theIndex+1).trim().equals(String.valueOf(askDay)) && singleValue) {
+                    if (calendarMonth.get(i).substring(theIndex, theIndex+1).trim().equals(String.valueOf(askDay)) && singleValue) {
 
-                    replacement = calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X");
-                    calendarMonth.set(i, replacement);
-                    singleValue = false;
+                        replacement = calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 1), "X");
+                        dateExecuted.add(calendarMonth.get(i).substring(theIndex,theIndex + 1));
+                        calendarMonth.set(i, replacement);
+                        singleValue = false;
+
+                    }
 
                 }
 
             } else if (String.valueOf(askDay).length() == 2) {
 
-                replacement  = calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX");
-                calendarMonth.set(i, replacement);
+                if (!dateExecuted.contains(String.valueOf(askDay))) {
+
+                    replacement  = calendarMonth.get(i).replace(calendarMonth.get(i).substring(theIndex, theIndex + 2), "XX");
+                    dateExecuted.add(calendarMonth.get(i).substring(theIndex,theIndex + 2));
+                    calendarMonth.set(i, replacement);
+
+                }
 
             }
 
@@ -162,6 +172,12 @@ public class CalendarData {
         for (String calendar: calendarMonth) {
 
             System.out.println(calendar);
+
+        }
+
+        for (String datee: dateExecuted) {
+
+            System.out.println(datee);
 
         }
 
@@ -777,6 +793,8 @@ public class CalendarData {
                 calendarJan.add("\t\t\t\t\t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \n");
                 calendarJan.add("\t\t\t\t\t  31   \t       \t       \t       \t       \t       \t       \n");
 
+                ArrayList<String> dateExecutedJan = new ArrayList<>();
+
                 for (String jan : calendarJan) {
                     System.out.println(jan);
                 }
@@ -792,7 +810,7 @@ public class CalendarData {
                 while(true) {
                     boolean singleValue = true;
 
-                    askDay(sundayListsJ, mondayListsJ, tuesdayListsJ, wednesdayListsJ, thursdayListsJ, fridayListsJ, saturdayListsJ, calendarJan, singleValue);
+                    askDay(sundayListsJ, mondayListsJ, tuesdayListsJ, wednesdayListsJ, thursdayListsJ, fridayListsJ, saturdayListsJ, calendarJan, singleValue, dateExecutedJan);
                 }
 
 
@@ -807,6 +825,8 @@ public class CalendarData {
                 calendarFeb.add("\t\t\t\t\t  14   \t  15   \t  16   \t  17   \t  18   \t  19   \t  20   \n");
                 calendarFeb.add("\t\t\t\t\t  21   \t  22   \t  23   \t  24   \t  25   \t  26   \t  27   \n");
                 calendarFeb.add("\t\t\t\t\t  28   \t       \t       \t       \t       \t       \t       \n");
+
+                ArrayList<String> dateExecutedFeb = new ArrayList<>();
 
 //                System.out.println("\n\t\t\t\t\t==================================================\n");
 //                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
@@ -833,7 +853,7 @@ public class CalendarData {
 
                     boolean singleValue = true;
 
-                    askDay(sundayListsF, mondayListsF, tuesdayListsF, wednesdayListsF, thursdayListsF, fridayListsF, saturdayListsF, calendarFeb, singleValue);
+                    askDay(sundayListsF, mondayListsF, tuesdayListsF, wednesdayListsF, thursdayListsF, fridayListsF, saturdayListsF, calendarFeb, singleValue, dateExecutedFeb);
                 }
 
             case "March":
