@@ -1182,15 +1182,32 @@ public class CalendarData {
 
             case "October":
 
-                System.out.println("\n\t\t\t\t\t==================================================\n");
-                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
-                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
-                System.out.println("\t\t\t\t\t      \t      \t      \t      \t  1   \t  2   \t  3   \n");
-                System.out.println("\t\t\t\t\t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \t  10   \n");
-                System.out.println("\t\t\t\t\t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \t  17   \n");
-                System.out.println("\t\t\t\t\t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \t  24   \n");
-                System.out.println("\t\t\t\t\t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \t  31   \n");
-                System.out.println("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+                ArrayList<String> calendarOctober = new ArrayList<>();
+                calendarOctober.add("\n\t\t\t\t\t==================================================\n");
+                calendarOctober.add("\t\t\t\t\t=> " + theMonth + "\n");
+                calendarOctober.add("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+                calendarOctober.add("\t\t\t\t\t      \t      \t      \t      \t  1   \t  2   \t  3   \n");
+                calendarOctober.add("\t\t\t\t\t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \t  10   \n");
+                calendarOctober.add("\t\t\t\t\t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \t  17   \n");
+                calendarOctober.add("\t\t\t\t\t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \t  24   \n");
+                calendarOctober.add("\t\t\t\t\t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \t  31   \n");
+                calendarOctober.add("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+
+                ArrayList<String> dateExecutedOctober = new ArrayList<>();
+
+//                System.out.println("\n\t\t\t\t\t==================================================\n");
+//                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
+//                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+//                System.out.println("\t\t\t\t\t      \t      \t      \t      \t  1   \t  2   \t  3   \n");
+//                System.out.println("\t\t\t\t\t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \t  10   \n");
+//                System.out.println("\t\t\t\t\t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \t  17   \n");
+//                System.out.println("\t\t\t\t\t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \t  24   \n");
+//                System.out.println("\t\t\t\t\t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \t  31   \n");
+//                System.out.println("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+
+                for (String october : calendarOctober) {
+                    System.out.println(october);
+                }
 
                 int[] sundayListsOc = {4, 11, 18, 25};
                 int[] mondayListsOc = {5, 12, 19, 26};
@@ -1200,7 +1217,13 @@ public class CalendarData {
                 int[] fridayListsOc = {2, 9, 16, 23, 30};
                 int[] saturdayListsOc = {3, 10, 17, 24, 31};
 
-//                askDay(sundayListsOc, mondayListsOc, tuesdayListsOc, wednesdayListsOc, thursdayListsOc, fridayListsOc, saturdayListsOc);
+                int countOctober = 0;
+                while (countOctober < 1000) {
+
+                    boolean singleValue = true;
+                    askDay(sundayListsOc, mondayListsOc, tuesdayListsOc, wednesdayListsOc, thursdayListsOc, fridayListsOc, saturdayListsOc, calendarOctober, singleValue, dateExecutedOctober);
+                    countOctober++;
+                }
 
                 break;
 
