@@ -958,6 +958,8 @@ public class CalendarData {
                 calendarMay.add("\t\t\t\t\t  23   \t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \n");
                 calendarMay.add("\t\t\t\t\t  30   \t  31   \t       \t       \t       \t       \t       \n");
 
+                ArrayList<String> dateExecutedMay = new ArrayList<>();
+
 //                System.out.println("\n\t\t\t\t\t==================================================\n");
 //                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
 //                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
@@ -968,6 +970,10 @@ public class CalendarData {
 //                System.out.println("\t\t\t\t\t  23   \t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \n");
 //                System.out.println("\t\t\t\t\t  30   \t  31   \t       \t       \t       \t       \t       \n");
 
+                for (String may : calendarMay) {
+                    System.out.println(may);
+                }
+
                 int[] sundayListsMy = {2, 9, 16, 23, 30};
                 int[] mondayListsMy = {3, 10, 17, 24, 31};
                 int[] tuesdayListsMy = {4, 11, 18, 25};
@@ -977,9 +983,12 @@ public class CalendarData {
                 int[] saturdayListsMy = {1, 8, 15, 22, 29};
 
                 int countMay = 0;
-                while ()
+                while (countMay < 1000) {
 
-//                askDay(sundayListsMy, mondayListsMy, tuesdayListsMy, wednesdayListsMy, thursdayListsMy, fridayListsMy, saturdayListsMy);
+                    boolean singleValue = true;
+                    askDay(sundayListsMy, mondayListsMy, tuesdayListsMy, wednesdayListsMy, thursdayListsMy, fridayListsMy, saturdayListsMy, calendarMay, singleValue, dateExecutedMay);
+                    countMay++;
+                }
 
                 break;
 
