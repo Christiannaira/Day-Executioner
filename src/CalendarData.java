@@ -124,7 +124,6 @@ public class CalendarData {
             System.out.println("saturday");
         }
 
-
         String replacement;
 
         for (int i = 0; i < calendarMonth.size(); i++) {
@@ -994,15 +993,32 @@ public class CalendarData {
 
             case "June":
 
-                System.out.println("\n\t\t\t\t\t==================================================\n");
-                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
-                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
-                System.out.println("\t\t\t\t\t      \t      \t  1   \t  2   \t  3   \t  4   \t  5   \n");
-                System.out.println("\t\t\t\t\t  6   \t  7   \t  8   \t  9   \t  10   \t  11   \t  12   \n");
-                System.out.println("\t\t\t\t\t  13   \t  14   \t  15   \t  16   \t  17   \t  18   \t  19   \n");
-                System.out.println("\t\t\t\t\t  20   \t  21   \t  22   \t  23  \t   24   \t  25   \t  26   \n");
-                System.out.println("\t\t\t\t\t  27   \t  28   \t  29   \t  30   \t       \t       \t       \n");
-                System.out.println("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+                ArrayList<String> calendarJune = new ArrayList<>();
+                calendarJune.add("\n\t\t\t\t\t==================================================\n");
+                calendarJune.add("\t\t\t\t\t=> " + theMonth + "\n");
+                calendarJune.add("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+                calendarJune.add("\t\t\t\t\t      \t      \t  1   \t  2   \t  3   \t  4   \t  5   \n");
+                calendarJune.add("\t\t\t\t\t  6   \t  7   \t  8   \t  9   \t  10   \t  11   \t  12   \n");
+                calendarJune.add("\t\t\t\t\t  13   \t  14   \t  15   \t  16   \t  17   \t  18   \t  19   \n");
+                calendarJune.add("\t\t\t\t\t  20   \t  21   \t  22   \t  23  \t   24   \t  25   \t  26   \n");
+                calendarJune.add("\t\t\t\t\t  27   \t  28   \t  29   \t  30   \t       \t       \t       \n");
+                calendarJune.add("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+
+                ArrayList<String> dateExecutedJune = new ArrayList<>();
+
+//                System.out.println("\n\t\t\t\t\t==================================================\n");
+//                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
+//                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+//                System.out.println("\t\t\t\t\t      \t      \t  1   \t  2   \t  3   \t  4   \t  5   \n");
+//                System.out.println("\t\t\t\t\t  6   \t  7   \t  8   \t  9   \t  10   \t  11   \t  12   \n");
+//                System.out.println("\t\t\t\t\t  13   \t  14   \t  15   \t  16   \t  17   \t  18   \t  19   \n");
+//                System.out.println("\t\t\t\t\t  20   \t  21   \t  22   \t  23  \t   24   \t  25   \t  26   \n");
+//                System.out.println("\t\t\t\t\t  27   \t  28   \t  29   \t  30   \t       \t       \t       \n");
+//                System.out.println("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+
+                for (String june : calendarJune) {
+                    System.out.println(june);
+                }
 
                 int[] sundayListsJu = {6, 13, 20, 27};
                 int[] mondayListsJu = {7, 14, 21, 28};
@@ -1012,7 +1028,13 @@ public class CalendarData {
                 int[] fridayListsJu = {4, 11, 18, 25};
                 int[] saturdayListsJu = {5, 12, 19, 26};
 
-//                askDay(sundayListsJu, mondayListsJu, tuesdayListsJu, wednesdayListsJu, thursdayListsJu, fridayListsJu, saturdayListsJu);
+                int countJune = 0;
+                while (countJune < 1000) {
+
+                    boolean singleValue = true;
+                    askDay(sundayListsJu, mondayListsJu, tuesdayListsJu, wednesdayListsJu, thursdayListsJu, fridayListsJu, saturdayListsJu, calendarJune, singleValue, dateExecutedJune);
+                    countJune++;
+                }
 
                 break;
 
