@@ -900,15 +900,32 @@ public class CalendarData {
 
             case "April":
 
-                System.out.println("\n\t\t\t\t\t==================================================\n");
-                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
-                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
-                System.out.println("\t\t\t\t\t      \t      \t      \t      \t  1   \t  2   \t  3   \n");
-                System.out.println("\t\t\t\t\t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \t  10   \n");
-                System.out.println("\t\t\t\t\t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \t  17   \n");
-                System.out.println("\t\t\t\t\t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \t  24   \n");
-                System.out.println("\t\t\t\t\t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \t       \n");
-                System.out.println("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+                ArrayList<String> calendarApril = new ArrayList<>();
+                calendarApril.add("\n\t\t\t\t\t==================================================\n");
+                calendarApril.add("\t\t\t\t\t=> " + theMonth + "\n");
+                calendarApril.add("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+                calendarApril.add("\t\t\t\t\t      \t      \t      \t      \t  1   \t  2   \t  3   \n");
+                calendarApril.add("\t\t\t\t\t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \t  10   \n");
+                calendarApril.add("\t\t\t\t\t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \t  17   \n");
+                calendarApril.add("\t\t\t\t\t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \t  24   \n");
+                calendarApril.add("\t\t\t\t\t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \t       \n");
+                calendarApril.add("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+
+                ArrayList<String> dateExecutedApril = new ArrayList<>();
+
+//                System.out.println("\n\t\t\t\t\t==================================================\n");
+//                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
+//                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+//                System.out.println("\t\t\t\t\t      \t      \t      \t      \t  1   \t  2   \t  3   \n");
+//                System.out.println("\t\t\t\t\t  4   \t  5   \t  6   \t  7   \t  8   \t  9   \t  10   \n");
+//                System.out.println("\t\t\t\t\t  11   \t  12   \t  13   \t  14   \t  15   \t  16   \t  17   \n");
+//                System.out.println("\t\t\t\t\t  18   \t  19   \t  20   \t  21   \t  22   \t  23   \t  24   \n");
+//                System.out.println("\t\t\t\t\t  25   \t  26   \t  27   \t  28   \t  29   \t  30   \t       \n");
+//                System.out.println("\t\t\t\t\t       \t       \t       \t       \t       \t       \t       \n");
+
+                for (String april : calendarApril) {
+                    System.out.println(april);
+                }
 
                 int[] sundayListsA = {4, 11, 18, 25};
                 int[] mondayListsA = {5, 12, 19, 26};
@@ -918,21 +935,38 @@ public class CalendarData {
                 int[] fridayListsA = {2, 9, 16, 23, 30};
                 int[] saturdayListsA = {3, 10, 17, 24};
 
-//                askDay(sundayListsA, mondayListsA, tuesdayListsA, wednesdayListsA, thursdayListsA, fridayListsA, saturdayListsA);
+                int countApril = 0;
+                while(countApril < 1000) {
+
+                    boolean singleValue = true;
+                    askDay(sundayListsA, mondayListsA, tuesdayListsA, wednesdayListsA, thursdayListsA, fridayListsA, saturdayListsA, calendarApril, singleValue, dateExecutedApril);
+                    countApril++;
+                }
 
                 break;
 
             case "May":
 
-                System.out.println("\n\t\t\t\t\t==================================================\n");
-                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
-                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
-                System.out.println("\t\t\t\t\t      \t      \t      \t      \t      \t      \t  1   \n");
-                System.out.println("\t\t\t\t\t  2   \t  3   \t  4   \t  5   \t  6   \t  7   \t  8   \n");
-                System.out.println("\t\t\t\t\t  9   \t  10   \t  11   \t  12   \t  13   \t  14   \t  15   \n");
-                System.out.println("\t\t\t\t\t  16   \t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \n");
-                System.out.println("\t\t\t\t\t  23   \t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \n");
-                System.out.println("\t\t\t\t\t  30   \t  31   \t       \t       \t       \t       \t       \n");
+                ArrayList<String> calendarMay = new ArrayList<>();
+                calendarMay.add("\n\t\t\t\t\t==================================================\n");
+                calendarMay.add("\t\t\t\t\t=> " + theMonth + "\n");
+                calendarMay.add("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+                calendarMay.add("\t\t\t\t\t      \t      \t      \t      \t      \t      \t  1   \n");
+                calendarMay.add("\t\t\t\t\t  2   \t  3   \t  4   \t  5   \t  6   \t  7   \t  8   \n");
+                calendarMay.add("\t\t\t\t\t  9   \t  10   \t  11   \t  12   \t  13   \t  14   \t  15   \n");
+                calendarMay.add("\t\t\t\t\t  16   \t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \n");
+                calendarMay.add("\t\t\t\t\t  23   \t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \n");
+                calendarMay.add("\t\t\t\t\t  30   \t  31   \t       \t       \t       \t       \t       \n");
+
+//                System.out.println("\n\t\t\t\t\t==================================================\n");
+//                System.out.println("\t\t\t\t\t=> " + theMonth + "\n");
+//                System.out.println("\t\t\t\t\t  S   \t  M   \t  T   \t  W   \t  T   \t  F   \t  S   \n");
+//                System.out.println("\t\t\t\t\t      \t      \t      \t      \t      \t      \t  1   \n");
+//                System.out.println("\t\t\t\t\t  2   \t  3   \t  4   \t  5   \t  6   \t  7   \t  8   \n");
+//                System.out.println("\t\t\t\t\t  9   \t  10   \t  11   \t  12   \t  13   \t  14   \t  15   \n");
+//                System.out.println("\t\t\t\t\t  16   \t  17   \t  18   \t  19   \t  20   \t  21   \t  22   \n");
+//                System.out.println("\t\t\t\t\t  23   \t  24   \t  25   \t  26   \t  27   \t  28   \t  29   \n");
+//                System.out.println("\t\t\t\t\t  30   \t  31   \t       \t       \t       \t       \t       \n");
 
                 int[] sundayListsMy = {2, 9, 16, 23, 30};
                 int[] mondayListsMy = {3, 10, 17, 24, 31};
@@ -941,6 +975,9 @@ public class CalendarData {
                 int[] thursdayListsMy = {6, 13, 20, 27};
                 int[] fridayListsMy = {7, 14, 21, 28};
                 int[] saturdayListsMy = {1, 8, 15, 22, 29};
+
+                int countMay = 0;
+                while ()
 
 //                askDay(sundayListsMy, mondayListsMy, tuesdayListsMy, wednesdayListsMy, thursdayListsMy, fridayListsMy, saturdayListsMy);
 
